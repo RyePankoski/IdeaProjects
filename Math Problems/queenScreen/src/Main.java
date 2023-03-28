@@ -7,7 +7,7 @@ public class Main {
     static int posY = 0;
     static int posX = 0;
     static int foundQueens = 0;
-    public static int size = 4;
+    public static int size = 8;
     static int queens = size;
     static ChessBoard board = new ChessBoard(size);
     static boolean[][] validSpotsForQueens = new boolean[size][size];
@@ -133,6 +133,7 @@ public class Main {
             tempX--;
         }
     }
+
     public static void printBoard(boolean[][] theBoard) {
 
         StringBuilder row = new StringBuilder();
@@ -151,6 +152,8 @@ public class Main {
     }
 
     public static void main(String[] args) {
+
+        long startTime = System.currentTimeMillis();
 
         //fill the arrays with true
         for (boolean[] row : validSpotsForQueens) {
@@ -202,6 +205,7 @@ public class Main {
             if (foundQueens == queens) {
                 System.out.println("Completed:");
                 System.out.println(board);
+                System.out.println((((System.currentTimeMillis() - startTime))));
                 System.exit(0);
             }
         }
