@@ -27,7 +27,7 @@ public class Main {
                 testNumber = 1;
                 break;
             }
-            if (testNumber == larger) {
+            if (testNumber > larger/2) {
                 break;
             }
             ++testNumber;
