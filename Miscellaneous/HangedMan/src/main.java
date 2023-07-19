@@ -79,7 +79,6 @@ public class main {
         }
         return secretWordArray;
     }
-
     public static void hangedManPrintStatements(int severity) {
 
         String top = "--------------";
@@ -121,8 +120,6 @@ public class main {
             default -> throw new IllegalStateException("Unexpected value: " + severity);
         }
     }
-
-
     public static void main(String[] args) {
 
         Scanner skan = new Scanner(System.in);
